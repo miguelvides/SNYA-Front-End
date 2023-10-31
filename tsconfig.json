@@ -21,8 +21,10 @@
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
-      "dom"
-    ]
+      "dom",  
+    ],
+    "strictPropertyInitialization" : false
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
