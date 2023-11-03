@@ -1,5 +1,7 @@
+import { institucionService } from './../institucion.service';
 import { Component, OnInit } from '@angular/core';
 import { Institucion } from '../institucion';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-instituciones',
@@ -7,23 +9,23 @@ import { Institucion } from '../institucion';
   styleUrls: ['./lista-instituciones.component.css']
 })
 export class ListaInstitucionesComponent implements OnInit {
-  instituciones:Institucion[];
+  Instituciones:Institucion[];
 
-  constructor(){}
+  constructor(private institucionServicio:institucionService,private router:Router) { }
 
   ngOnInit(): void {
-      this.instituciones = [{
-        "id":1,
-        "nombre":"FUSADES",
-        "tipoInstitucion":"Publica",
-        "fecha":"Diciembre 2023"
-    },
-    {
-      "id":2,
-      "nombre":"CALLEJAS",
-      "tipoInstitucion":"PRIVADA",
-      "fecha":"Enero 2023"
-  }];
+    this.obtenerInstitucion();
   }
+
+  actualizarInstitucion(id:number){
+    this.router.navigate(['actualizar-institucion',id]);
+  }
+
+  private obtenerInstitucion(){
+    this.institucionServicio.obtenerListaDeInstituciones().subscribe(dato => {
+      this.Instituciones = dato;
+    });
+  }
+
 
 }

@@ -1,9 +1,9 @@
 export class Institucion {
-    id:number;
+    identificador:string;
     nombre:string;
-    tipoInstitucion:string;
+    tipo_institucion:string;
     fecha:string;
-    
+
 
 
 }

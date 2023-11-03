@@ -2,17 +2,17 @@
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
-    <th>Identificador</th>  
+    <th>Identificador</th>
       <th>Nombre</th>
       <th>Tipo de Institucion</th>
       <th>Fecha de Ingreso</th>
-      <th>Acciones</th>   
+      <th>Acciones</th>
       </thead>
         <tbody>
-            <tr *ngFor="let Institucion of instituciones">
-                <td>{{Institucion.id}}</td>
+            <tr *ngFor="let Institucion of Instituciones">
+                <td>{{Institucion.identificador}}</td>
                 <td>{{Institucion.nombre}}</td>
-                <td>{{Institucion.tipoInstitucion}}</td>
+                <td>{{Institucion.tipo_institucion}}</td>
                 <td>{{Institucion.fecha}}</td>
 
             </tr>
@@ -21,6 +21,6 @@
 
 
         </tbody>
-      
+
 
 </table>
