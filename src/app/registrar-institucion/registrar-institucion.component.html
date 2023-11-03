@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de institucion</h3>
+  <form (ngSubmit)= "onSubmit()" #empleadoForm = "ngForm">
+    <div class="form-group">
+      <label>Nombre : </label>
+      <input type = "text"
+      class="form-control"
+      id = "nombre"
+      [(ngModel)] = "institucion.nombre"
+      name = "nombre"
+      required
+      minlength="4"
+      maxlength="10"
+      placeholder="Digite el nombre de la institucion "
+      #nombre = "ngModel"
+      >
+      <div class="alert alert-danger" *ngIf= "nombre.invalid && (nombre.dirty || nombre.touched)">
+
+      </div>
+    </div>
+
+
+
+
+    <button class="btn btn-success" Guardar ></button>
+  </form>
+</div>

@@ -1,2 +1,15 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="instituciones" routerLinkActive="active" class="nav-link" >Lista de Instituciones</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="registrar-institucion" routerLinkActive="active" class="nav-link" >Añadir Institucion</a>
+    </li>
+  </ul>
+</nav>
+
 <h1 class="text-center">{{title}}</h1>
-<app-lista-instituciones></app-lista-instituciones>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
