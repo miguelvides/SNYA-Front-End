@@ -1,27 +1,36 @@
-# SnyaFrontendAngular
+# Proyecto2SNYA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Proyecto 2 de la asignatura IGF115 en colaboracion con los estudiantes de PRN315
+Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) versión 16.2.1.
 
-## Development server
+# Instalación 🤷‍♂️
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Primero deberás clonar el proyecto en tu maquina local, puedes hacerlo con GitHub Desktop o desde consola ( para eso deberás de tener instalado Git [Click para descargar Git](https://git-scm.com/downloads))
+Para Ejecutar el proyecto deberá de tener GlassFish instalado o wampserver, xampp para correr los servicios de apache, mysql, y phpMyAdmin
+Una vez instalado puede
 
-## Code scaffolding
+En esta guia se clonará por medio de consola
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1.  Abrir una terminal e ingresar a la ruta donde quieres clonar el repositorio (Ejemplo: **C:\Users\Usuario\Documents>** ruta para la carpeta documentos ( si tienes problemas para usar la consola, puedes ver el siguiente video que te explica como acceder a una carpeta desde cmd [Como acceder a carpetas desde cmd](https://www.youtube.com/watch?v=HuTiugouE2o&ab_channel=computadorastiolne)
 
-## Build
+2.  Una vez dentro de la carpeta, ejecuta el siguiente comando en tu terminal para clonar el repositorio
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+> `git clone https://github.com/miguelvides/SNYA-Front-End.git`
 
-## Running unit tests
+# Configuraciones Iniciales ⚙
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1.  Inicie los servicios de GlassFish o wampserver, xampp
 
-## Running end-to-end tests
+2.  Deberá de crear una base datos la cuál llamaremos **snya**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3.  Una vez creada la base de datos, abriremos una terminal en la ruta del proyecto, **C:\Users\Usuario\Documents\Proyecto2SNYA>** ( nuestra ruta de ejemplo )
 
-## Further help
+# Ejecutar Proyecto 🚀
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Una vez hechas las configuraciones iniciales ejecutaremos el proyecto
+
+1.  Inicie los servicios de GlassFish o wampserver, xampp
+
+2.  Abra una terminal en la ruta raiz del proyecto, **C:\Users\Usuario\Documents\Proyecto2SNYA>** ( nuestra ruta de ejemplo )
+
+3. Ejecute `ng serve` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente.
