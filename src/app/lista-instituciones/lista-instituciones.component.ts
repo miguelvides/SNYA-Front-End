@@ -1,3 +1,4 @@
+
 import { institucionService } from './../institucion.service';
 import { Component, OnInit } from '@angular/core';
 import { Institucion } from '../institucion';
@@ -15,10 +16,18 @@ export class ListaInstitucionesComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerInstitucion();
+
   }
 
   actualizarInstitucion(id:number){
     this.router.navigate(['actualizar-institucion',id]);
+  }
+
+  eliminarInstitucion(id:String){
+    this.institucionServicio.eliminarInstitucion(id).subscribe(dato =>{
+      console.log(dato);
+      this.obtenerInstitucion();
+    })
   }
 
   private obtenerInstitucion(){
