@@ -16,7 +16,13 @@ export class ListaInstitucionesComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerInstitucion();
-
+    this.Instituciones=[{
+      "identificador":"001",
+      "nombre":"Prueba",
+      "tipo_institucion": "hola",
+      "fecha":"9/11/23"
+    },
+  ];
   }
 
   actualizarInstitucion(id:number){
