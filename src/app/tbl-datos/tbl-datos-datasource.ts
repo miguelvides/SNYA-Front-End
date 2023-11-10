@@ -9,9 +9,9 @@ export interface TblDatosItem {
   name: string;
   id: number;
   nombreInstitucion: string; // Agrega la propiedad nombreInstitucion
-  tipoInstitucion: string; // Agrega la propiedad tipoInstitucion
-  fechaIngreso: string; // Agrega la propiedad fechaIngreso
-  // Agrega otras propiedades según sea necesario
+  tipoInstitucion: string; 
+  fechaIngreso: string; 
+  
 }
 
 // TODO: reemplaza esto con datos reales de tu aplicación
