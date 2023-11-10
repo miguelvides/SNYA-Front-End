@@ -8,31 +8,18 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface TblDatosItem {
   name: string;
   id: number;
+  nombreInstitucion: string; // Agrega la propiedad nombreInstitucion
+  tipoInstitucion: string; // Agrega la propiedad tipoInstitucion
+  fechaIngreso: string; // Agrega la propiedad fechaIngreso
+  // Agrega otras propiedades según sea necesario
 }
 
-// TODO: replace this with real data from your application
+// TODO: reemplaza esto con datos reales de tu aplicación
 const EXAMPLE_DATA: TblDatosItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  { id: 1, name: 'Hydrogen', nombreInstitucion: 'Instituto A', tipoInstitucion: 'Público', fechaIngreso: '01/01/2023' },
+  // Agrega más datos según sea necesario
 ];
+
 
 /**
  * Data source for the TblDatos view. This class should
@@ -79,26 +66,25 @@ export class TblDatosDataSource extends DataSource<TblDatosItem> {
   private getPagedData(data: TblDatosItem[]): TblDatosItem[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
-      return data.splice(startIndex, this.paginator.pageSize);
+      return data.slice(startIndex, startIndex + this.paginator.pageSize);
     } else {
       return data;
     }
   }
-
-  /**
-   * Sort the data (client-side). If you're using server-side sorting,
-   * this would be replaced by requesting the appropriate data from the server.
-   */
+  
   private getSortedData(data: TblDatosItem[]): TblDatosItem[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }
-
+  
     return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'nombreInstitucion': return compare(a.nombreInstitucion, b.nombreInstitucion, isAsc);
+        case 'tipoInstitucion': return compare(a.tipoInstitucion, b.tipoInstitucion, isAsc);
+        case 'fechaIngreso': return compare(a.fechaIngreso, b.fechaIngreso, isAsc);
         default: return 0;
       }
     });

@@ -16,7 +16,7 @@ export class TblDatosComponent implements AfterViewInit {
   dataSource = new TblDatosDataSource();
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['nombreInstitucion', 'tipoInstitucion', 'fechaIngreso', 'acciones'];
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
