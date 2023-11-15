@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./lista-instituciones.component.css']
 })
 export class ListaInstitucionesComponent implements OnInit {
-  Instituciones:Institucion[];
+  instituciones: Institucion[];
 
   constructor(private institucionServicio:institucionService,private router:Router) { }
 
@@ -23,7 +23,7 @@ export class ListaInstitucionesComponent implements OnInit {
 
   private obtenerInstitucion(){
     this.institucionServicio.obtenerListaDeInstituciones().subscribe(dato => {
-      this.Instituciones = dato;
+      this.instituciones = dato;
     });
   }
 
