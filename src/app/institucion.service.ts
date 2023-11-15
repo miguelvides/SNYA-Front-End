@@ -16,4 +16,8 @@ export class institucionService {
   obtenerListaDeInstituciones():Observable<Institucion[]>{
     return this.httpClient.get<Institucion[]>(`${this.baseURL}`);
   }
+
+  eliminarInstitucion(id:String): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`)
+  }
 }
