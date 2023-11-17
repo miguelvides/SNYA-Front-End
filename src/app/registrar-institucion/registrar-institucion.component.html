@@ -1,27 +1,40 @@
-<div class="col-md-6 offset-md-3">
+<div class="col-md-6 offset-md-3"><br><br>
   <h3 class="text-center">Registro de institucion</h3>
-  <form (ngSubmit)= "onSubmit()" #empleadoForm = "ngForm">
+  <form (ngSubmit)="onSubmit()" #empleadoForm="ngForm">
     <div class="form-group">
-      <label>Nombre : </label>
-      <input type = "text"
-      class="form-control"
-      id = "nombre"
-      [(ngModel)] = "institucion.nombre"
-      name = "nombre"
-      required
-      minlength="4"
-      maxlength="10"
-      placeholder="Digite el nombre de la institucion "
-      #nombre = "ngModel"
-      >
-      <div class="alert alert-danger" *ngIf= "nombre.invalid && (nombre.dirty || nombre.touched)">
+      <label>Nombre de la instituciones: </label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="institucion.nombre" name="nombre" required
+        minlength="4" maxlength="10" placeholder="Digite el nombre de la institucion " #nombre="ngModel">
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
 
+      </div><br>
+      <div>
+        <label for="">Tipo de institucion</label><br>
+        <select name="" id="" class="form-control">
+          <option value="">Publica</option>
+          <option value="">Privada</option>
+        </select>
+      </div><br>
+      <div>
+        <label for="">Programa Asociado</label>
+        <input type="text" class="form-control">
+      </div><br>
+      <div>
+        <label for="">Fecha de ingreso</label>
+        <input type="date" class="form-control">
       </div>
     </div>
 
 
-
-
-    <button class="btn btn-success" Guardar ></button>
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-secondary"> Atras </button>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-success" Guardar> Agregar Intitución</button>
+      </div>
+    </div>
+    
+    
   </form>
 </div>
