@@ -17,12 +17,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import { TblPresupuestoComponent } from './tbl-presupuesto/tbl-presupuesto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrarInstitucionComponent,
-    TblDatosComponent
+    TblDatosComponent,
+    TblPresupuestoComponent
   ],
   imports: [
     BrowserModule,
