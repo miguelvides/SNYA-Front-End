@@ -1,6 +1,39 @@
 <h1 class="text-center">{{title}}</h1>
+
+<div class ="container" >
+    <nav class="navbar navbar-expand-lg navbar-dark" style = "background-color: blue;">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="instituciones">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+          aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="instituciones" routerLinkActive="active">Instituciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="agregar-actividad" routerLinkActive="active">Actividades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Donantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Presupuesto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Salir</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</div>
+
 <div class = "container" >   
-    <app-lista-instituciones></app-lista-instituciones>
+    <router-outlet></router-outlet>
 </div>
 
 

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ListaInstitucionesComponent } from './lista-instituciones/lista-instituciones.component';
 import { ActualizarInstitucionComponent } from './actualizar-institucion/actualizar-institucion.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AgregarActividadComponent } from './agregar-actividad/agregar-actividad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaInstitucionesComponent,
-    ActualizarInstitucionComponent
+    ActualizarInstitucionComponent,
+    AgregarActividadComponent
   ],
   imports: [
     BrowserModule,
