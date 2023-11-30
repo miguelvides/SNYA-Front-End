@@ -16,7 +16,7 @@ export class TblPresupuestoComponent implements AfterViewInit {
   dataSource = new TblPresupuestoDataSource();
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name','acciones'];
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;

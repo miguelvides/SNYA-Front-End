@@ -12,6 +12,17 @@
       <td mat-cell *matCellDef="let row">{{row.name}}</td>
     </ng-container>
 
+     <!-- Acciones Column -->
+     <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let row">
+        <!-- Agrega aquí tus acciones -->
+      
+        <mat-icon aria-hidden="false" aria-label="Icono de eliminar" fontIcon="delete"></mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Icono de actualización">update</mat-icon>
+      </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>

@@ -3,6 +3,8 @@ import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { TblDatosDataSource, TblDatosItem } from './tbl-datos-datasource';
+import { RouterModule, Routes } from '@angular/router';
+
 
 @Component({
   selector: 'app-tbl-datos',
@@ -24,3 +26,4 @@ export class TblDatosComponent implements AfterViewInit {
     this.table.dataSource = this.dataSource;
   }
 }
+
