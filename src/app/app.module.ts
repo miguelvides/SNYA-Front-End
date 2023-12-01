@@ -7,13 +7,15 @@ import { ListaInstitucionesComponent } from './lista-instituciones/lista-institu
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarInstitucionComponent } from './registrar-institucion/registrar-institucion.component';
 import { FormsModule } from '@angular/forms';
+import { ListarDonanteComponent } from './listar-donante/listar-donante.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaInstitucionesComponent,
-    RegistrarInstitucionComponent 
+    RegistrarInstitucionComponent,
+    ListarDonanteComponent 
   ],
   imports: [
     BrowserModule,
